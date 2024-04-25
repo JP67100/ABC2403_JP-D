@@ -19,31 +19,35 @@ RESULTAT
 
 VARIABLES 
 
-    premierNombre est le rayon d'une sphere
-    secondNombre est un angle en degre
-    π est la circonference
+   rayon est un decimale 
+   aire est une decimale 
+   Volume est une decimale 
 
 TRAITEMENT
 
-    ECRIRE "premierNombre"
-    Lire "premierNombre"
-    Ecrire "secondeNombre"
-    Lire "secondNombre"
-    Aire <-- = (4π x R²)
-    Volume <-- (4π x R³/3)
+    ECRIRE "Veuillez saisir le rayon de la sphere"
+
+    Lire rayon
+    
+    aire = 4 π rayon²
+
+    volume = 4 * π * R³ / 3 
+    
 
 RESULTAT
 
-    Ecrire "Aire"
-    Ecrire "Volume"
+    ECRIRE "L'aire de la sphère est " , aire
+
+    ECRIRE "Le volume de la sphère est " , volume
+   
 
 **Exercice 1.5**
 
 VARIABLES
 
-    premierNombre est le rayon d'un cercle
-    secondNombre est un angle en degre
-    π est la circonference
+    premierNombre est un decimale
+    secondNombre est decimale
+    aire est un decimale
 
 
 TRAITEMENT

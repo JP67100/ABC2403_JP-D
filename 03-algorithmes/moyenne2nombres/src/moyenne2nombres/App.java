@@ -24,7 +24,7 @@ public class App {
 	
 	moyenne = (nombre1 + nombre2) / 2F;
 	
-	System.out.println("La moyenne de " + nombre1 + " et " + nombre2 + " est: " +  moyenne );
+	System.out.println (" La moyenne de " + nombre1 + " et " + nombre2 + " est: " +  moyenne );
 	
 	
 	sc.close(); // Toujours penser a ferme le Scanner
