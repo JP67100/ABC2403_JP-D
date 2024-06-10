@@ -6,7 +6,7 @@ class Bouteille {
 
 	private float contenanceEnL;
 	private float contenuEnL;
-	private boolean ouvert;
+	private boolean ouvertOn;
 	private String typeDeContenu;
 
 	// access/modifier
@@ -15,7 +15,7 @@ class Bouteille {
 	public Bouteille() {
 		contenanceEnL = 1;
 		contenuEnL = 1;
-		ouvert = false;
+		ouvertOn = false;
 		typeDeContenu = "H2O";
 	}
 
@@ -25,7 +25,7 @@ class Bouteille {
 	public Bouteille(float _contenanceEnL, float _contenuEnL, boolean _ouvert, String _typeDeContenu) {
 		this.contenanceEnL = _contenanceEnL;
 		this.contenuEnL = _contenuEnL;
-		this.ouvert = _ouvert;
+		this.ouvertOn = ouvertOn;
 		this.typeDeContenu = _typeDeContenu;
 
 		// _bouteilleARecopier.typeDeContenu="Champagne";
@@ -36,7 +36,7 @@ class Bouteille {
 	public Bouteille(Bouteille _bouteilleARecopier) {
 		this.contenanceEnL = _bouteilleARecopier.contenanceEnL;
 		this.contenuEnL = _bouteilleARecopier.contenuEnL;
-		this.ouvert = _bouteilleARecopier.ouvert;
+		this.ouvertOn = _bouteilleARecopier.ouvertOn;
 		this.typeDeContenu = _bouteilleARecopier.typeDeContenu;
 
 	}
@@ -50,15 +50,41 @@ class Bouteille {
 	}
 
 	public boolean ouverture() {
-		if (this.ouvert = false)
-			ouvert=true;
-			this.ouvert = true;
-		return this.ouvert;
+	
+		boolean ouvertOn;
+		if (this.ouvertOn = false) {
+			ouvertOn=true;
+		this.ouvertOn = true;
+		return this.ouvertOn;			}
 	}
 
-	public boolean fermer() {
-		if (this.ouvert == true)
-			this.ouvert = false;
-		return this.ouvert;
+	public boolean fermeture() {
+		boolean fermerOn;
+		if (this.ouvertOn= false) {
+			fermerOn = true;
+			this.ouvertOn = false; 
+								  }
+			return this.ouvertOn ;
+	
+	public boolean estPlein () {
+		boolean plein;
+		if (this.contenuEnL == this.contenanceEnL) {
+			plein = true ;						   }
+			else plein = false;
+		return plein;
+							   }
+	
+			
+			
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 }
