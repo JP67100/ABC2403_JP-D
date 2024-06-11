@@ -13,8 +13,8 @@ class Bouteille {
 	// constructor
 
 	public Bouteille() {
-		contenanceEnL = 1;
-		contenuEnL = 1;
+		contenanceEnL = 1.0f;
+		contenuEnL = 1.0f;
 		ouvertOn = false;
 		typeDeContenu = "H2O";
 	}
@@ -27,7 +27,7 @@ class Bouteille {
 		this.contenuEnL = _contenuEnL;
 		this.ouvertOn = ouvertOn;
 		this.typeDeContenu = _typeDeContenu;
-
+		
 		// _bouteilleARecopier.typeDeContenu="Champagne";
 
 	}
@@ -49,42 +49,101 @@ class Bouteille {
 		return result;
 	}
 
-	public boolean ouverture() {
-	
-		boolean ouvertOn;
-		if (this.ouvertOn = false) {
-			ouvertOn=true;
-		this.ouvertOn = true;
-		return this.ouvertOn;			}
+	public float donneContenueEnCL() {
+
+		float result = this.contenuEnL * 100;
+
+		return result;
 	}
 
-	public boolean fermeture() {
-		boolean fermerOn;
-		if (this.ouvertOn= false) {
-			fermerOn = true;
-			this.ouvertOn = false; 
-								  }
-			return this.ouvertOn ;
-	
-	public boolean estPlein () {
-		boolean plein;
+	public boolean estPleine() {
+
+		boolean result;
 		if (this.contenuEnL == this.contenanceEnL) {
-			plein = true ;						   }
-			else plein = false;
-		return plein;
-							   }
-	
-			
-			
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
+			result = true;
+		} else {
+			result = false;
+		}
+
+		return result;
+	}
+
+	public boolean ouvrir() {
+
+		boolean result;
+		if (this.ouvertOn == false) {
+			this.ouvertOn = true;
+			result = true;
+		} else {
+			result = false;
+		}
+
+		return result;
+	}
+
+	public boolean fermer() {
+
+		boolean result;
+		if (this.ouvertOn == true) {
+			this.ouvertOn = false;
+			result = true;
+		} else {
+			result = false;
+		}
+
+		return result;
+	}
+
+	public boolean laRemplir() {
+
+		boolean result;
+		if (this.contenuEnL < this.contenanceEnL && this.ouvertOn == true) {
+			this.contenuEnL = this.contenanceEnL;
+			result = true;
+		} else {
+			result = false;
+		}
+
+		return result;
+	}
+
+	public boolean laRemplir(float quantite) {
+
+		boolean result;
+		if (this.contenuEnL + quantite <= this.contenanceEnL && this.ouvertOn == true) {
+			this.contenuEnL += quantite;
+			result = true;
+		} else {
+			result = false;
+		}
+
+		return result;
+	}
+
+	public boolean laVider() {
+
+		boolean result;
+		if (this.contenuEnL > 0 && this.ouvertOn == true) {
+			this.contenuEnL = 0;
+			result = true;
+		} else {
+			result = false;
+		}
+
+		return result;
+	}
+
+	public boolean laVider(float quantite) {
+
+		boolean result;
+		if (this.contenuEnL - quantite >= 0 && this.ouvertOn == true) {
+			this.contenuEnL -= quantite;
+			result = true;
+		} else {
+			result = false;
+		}
+
+		return result;
+
 	}
 }
