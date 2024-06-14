@@ -14,7 +14,7 @@ public class App {
 
 		Bouteille bouteille5 = new Bouteille(1.2f, 1.3f, false, "h2o");
 		
-		Bouteille bouteille6 = new Bouteille(1.2f, 0.6f, true, "h2o" );
+		Bouteille bouteille6 = new Bouteille(1.2f, 0.6f, false, "h2o" );
 		
 		
 		

@@ -143,7 +143,21 @@ class Bouteille {
 			result = false;
 		}
 
-		return result;
+		return result;}
 
-	}
+		public boolean remplir (float quantite) {
+			boolean retour= false; 
+			
+			if(this.ouvertOn==true && quantite <= (this.contenanceEnL-this.contenuEnL)) {
+				retour = true;
+				contenuEnL = contenuEnL + quantite;
+			}
+			else { retour=false; }
+					
+			
+			
+			
+			return retour; 
+			
+		}
 }
