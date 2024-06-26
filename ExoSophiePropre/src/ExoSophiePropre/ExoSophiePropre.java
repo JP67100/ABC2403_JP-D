@@ -13,8 +13,6 @@ public class ExoSophiePropre {
 
 	public static boolean rechercherSiChiffreExiste(int[] tab, int chiffreARechercher) {
 
-		chiffreARechercher = 5;
-
 		boolean ok = false; // Initialise un booléen sur Faux pour indiquer si le numéro est trouvé
 
 		int i = 0; // Index pour parcourir le tableau
