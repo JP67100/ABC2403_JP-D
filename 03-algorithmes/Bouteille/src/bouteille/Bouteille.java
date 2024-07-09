@@ -19,7 +19,7 @@ class Bouteille {
 		typeDeContenu = "H2O";
 	}
 
-	// constructeur classique
+	// constructeur classique (pour initialiser des donnés que l'utilisateur a choisi ! toujours en public !)
 	// The user will provide the details
 
 	public Bouteille(float _contenanceEnL, float _contenuEnL, boolean _ouvert, String _typeDeContenu) {
